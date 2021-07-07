@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Reproductor mío</title>
+    </head>
+    <body>
+        <!--espacio de trabajo-->
+        <div id="tarjeta">
+            <div id="portada">
+                <img src="imagenes/Chase - The Brothers Records.jpg" id="portada-img">
+            </div>
+            <h2 id="nombre">Chase - The Brothers Records</h2>
+            <div id="controles">
+                <!--volumen-->
+                <div id="vol">
+                    <input type="range" id="volumen" min="0" max="1" step=".1" value="1" orient= "vertical" oninput=
+                    "VolumenControl()">
+                </div>
+                <!--Audio-->
+                <div id="panel">
+                    <div id="duración">
+                        <div id="inicio">00:00</div>
+                        <div id="fin">00:00</div>
+                    </div>
+                    <input type="range" id="tiempo" min="0" max="0" step="1" value="0" oninput="InputProgresoTiempo()"><br>
+                    <audio src="Musicas/Chase - The Brothers Records.mp3" id="musica" ontimeupdate="ProgresoTiempo()"></audio>
+                    <!--Botones-->
+                    <img src="svg/back.svg" onclick="Anterior()" class="btnControls">
+                    <img src="svg/play.svg" onclick="PlayPause()" class="btnControls" id="btnPlay">
+                    <img src="svg/next.svg" onclick="Siguiente()" class="btnControls">
+                    <br><br>
+                    <select onclick="Listar()">
+                        <option onclick="seleccion(0)" id="op0">Lista de reproducción</option>
+                        <option onclick="seleccion(1)" id="op1">Lista de reproducción</option>
+                        <option onclick="seleccion(2)" id="op2">Lista de reproducción</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
