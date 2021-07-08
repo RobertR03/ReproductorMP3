@@ -51,7 +51,11 @@ select{
 }
 
 #volumen{
-    height:70%;
+    -webkit-appearance: slider-vertical;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    margin: 0%;
 }
 
 /*Lugar donde se sitúa el control de volumen*/
