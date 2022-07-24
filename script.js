@@ -90,8 +90,10 @@ function timeToMinute(time) {
 }
 
 //selecciona la canción en la lista de reproducción
-function seleccion(num) {
-    indice = num - 1;
+function seleccion() {
+    var selecion = document.getElementById('selector');
+    var seleccionado = selecion.options[selecion.selectedIndex].value;
+    indice = seleccionado - 1;
     Siguiente();
 }
 

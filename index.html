@@ -33,10 +33,10 @@
                     <img src="svg/play.svg" onclick="PlayPause()" class="btnControls" id="btnPlay">
                     <img src="svg/next.svg" onclick="Siguiente()" class="btnControls">
                     <br><br>
-                    <select onclick="Listar()">
-                        <option onclick="seleccion(0)" id="op0">Lista de reproducción</option>
-                        <option onclick="seleccion(1)" id="op1">Lista de reproducción</option>
-                        <option onclick="seleccion(2)" id="op2">Lista de reproducción</option>
+                    <select onfocus="Listar()" onchange="seleccion()" id="selector">
+                        <option value="0" id="op0">Lista de reproducción</option>
+                        <option value="1" id="op1">Lista de reproducción</option>
+                        <option value="2" id="op2">Lista de reproducción</option>
                     </select>
                 </div>
             </div>
